@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-MahirMIslam</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Mahir's Portfolio</a>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Travel</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="bx bx-moon" id="darkMode-icon"></div>
+        <div class="bx bx-menu" id="menu-icon" ></div>
+
+        <script>
+            let darkModeIcon = document.querySelector('#darkMode-icon');
+        
+            darkModeIcon.onclick = () => {
+                darkModeIcon.classList.toggle('bx-moon');
+                darkModeIcon.classList.toggle('bx-sun');
+                document.body.classList.toggle('dark-mode');
+            };
+        </script>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, I am</h3>
+            <h1>Lucas Franklin</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <div class="social-media">
+                <a href="#" onclick="animateFunc()"><i class='bx bxs-game'></i></a>
+                <a href="#"><i class='bx bx bxl-github'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+            </div>
+
+            <a href="#" class="btn">View Resume</a>
+        </div>
+
+        <div class="profession-container">
+            <div class="profession-box">
+                <div class="profession" style="--i:0;">
+                    <i class='bx bx-code-alt'></i>
+                    <h3>Web Developer</h3>
+                </div>
+                <div class="profession" style="--i:1;">
+                    <i class='bx bxs-plane-alt'></i>
+                    <h3>World Traveler</h3>
+                </div>
+                <div class="profession" style="--i:2;">
+                    <i class="fa-solid fa-gamepad"></i>
+                    <h3>Video Gamer</h3>
+                </div>
+                <div class="profession" style="--i:3;">
+                    <i class='bx bxs-basketball'></i>
+                    <h3>Sport Fanatic</h3>
+                </div>
+                <div class="circle"></div>
+            </div>
+            
+            <div class="overlay">
+                <div class="pacman"></div>
+                <div class="mouth"></div>
+                <div class="mouth"></div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/8146-removebg-preview.png" alt="">
+            <img src="images/HEIF Image.png" alt="" class="overlay-image" data-sr-id="13" style="opacity: 1;">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Hi, I'm Here To Help Your Next Project</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+
+    </section>
+
+    <section class="services" id="services">
+
+        <div class="container">
+
+            <div class="slide">
+
+                <div class="item" style="background-image: url(./images/Singapore.jpg);">
+                    <div class="content">
+                        <div class="name">Singapore</div>
+                        <div class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+                            Praesent libero. Sed cursus ante dapibus diam.</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(./images/Bhutan.jpg);">
+                    <div class="content">
+                        <div class="name">Bhutan</div>
+                        <div class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+                            Praesent libero. Sed cursus ante dapibus diam.</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(./images/Canada.jpg);">
+                    <div class="content">
+                        <div class="name">Canada</div>
+                        <div class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+                            Praesent libero. Sed cursus ante dapibus diam.</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(./images/America.jpg);">
+                    <div class="content">
+                        <div class="name">America</div>
+                        <div class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+                            Praesent libero. Sed cursus ante dapibus diam.</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(./images/Turkey.jpg);">
+                    <div class="content">
+                        <div class="name">Turkey</div>
+                        <div class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+                            Praesent libero. Sed cursus ante dapibus diam.</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(./images/Bangladesh.jpg);">
+                    <div class="content">
+                        <div class="name">Bangladesh</div>
+                        <div class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+                            Praesent libero. Sed cursus ante dapibus diam.</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="button">
+                <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <script src="js/app.js"></script>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Project</span></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="images/bangladesh.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Blah sdfhsdkjfhsdkfs sdfhsdjfhsdkjfsdhkfsdhf fksdhfkdsjfh</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="images/Singapore.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Blah sdfhsdkjfhsdkfs sdfhsdjfhsdkjfsdhkfsdhf fksdhfkdsjfh</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="images/bangladesh.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Blah sdfhsdkjfhsdkfs sdfhsdjfhsdkjfsdhkfsdhf fksdhfkdsjfh</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="images/bangladesh.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Blah sdfhsdkjfhsdkfs sdfhsdjfhsdkjfsdhkfsdhf fksdhfkdsjfh</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="images/bangladesh.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Blah sdfhsdkjfhsdkfs sdfhsdjfhsdkjfsdhkfsdhf fksdhfkdsjfh</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="images/bangladesh.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Blah sdfhsdkjfhsdkfs sdfhsdjfhsdkjfsdhkfsdhf fksdhfkdsjfh</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact"> 
+        <div class="contact-container">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+                <div class="contact-left-title">
+                    <h2>Get in touch</h2>
+                    <hr>
+                </div>
+                <input type="hidden" name="access_key" value="92ea870f-ec5d-436e-955b-5ccf335c6a3e">
+                <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+                <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+                <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+                <button type="submit">Submit <i class='bx bx-right-arrow-alt'></i></button>
+            </form>
+
+            <div class="contact-right">
+                <img src="/images/carrier-pigeon-154970_1920.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-test">
+            <p>Copyright &copy; 2024 by Mahir Mahbub Islam | All Rights Reserved.</p>
+            <a href="http://www.freepik.com">Paint Splatter Background Designed by Harryarts / Freepik</a>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
