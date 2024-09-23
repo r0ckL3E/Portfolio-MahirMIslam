@@ -1,1 +1,3 @@
 # Portfolio-MahirMIslam
+
+I developed a responsive portfolio website using HTML, CSS, and JavaScript, incorporating API usage such as Web3Forms API to handle form submissions securely using the POST method. Integrated external icon libraries (Boxicons and Font Awesome) to enhance visual appeal and usability, and implemented a dark mode toggle with JavaScript, allowing users to switch between light and dark themes, with preferences saved in local storage. Designed custom styles using CSS, including responsive design techniques and CSS variables for consistent theming, and created a mobile-friendly navigation menu with a toggle button for improved usability on smaller screens.
