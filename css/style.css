@@ -136,12 +136,18 @@ section {
 
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1650px) {
     .home {
         display: flex;
         align-items: center;
         margin-left: 300px;
     }
+
+    .home-content p {
+        font-size: 2rem;
+        width: 100%;
+    }
+    
 }
 
 
