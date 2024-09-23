@@ -128,12 +128,17 @@ section {
 .home {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
 }
 
 .home .home-content {
     max-width: 44rem;
     margin-top: 30px;
+}
+
+@media (min-width: 1310px) and (max-width: 1310px) {
+    .home .home-content {
+        margin-left: 5.6rem;
+    }
 }
 
 .home-content h3 {
