@@ -1,0 +1,134 @@
+/* Pacman CSS */
+
+.illustration {
+	width:300px;
+	margin-left:-150px;
+	margin-top:-150px;
+
+}
+
+/*
+---------
+HEAD
+---------
+*/
+
+.head-ghost {
+	height:22px;
+}
+.head-ghost.line1 {
+	max-width:80px;
+}
+.head-ghost.line2 {
+	max-width:168px;
+}
+.head-ghost.line3 {
+	max-width:212px;
+}
+.head-ghost.line4 {
+	height:44px;	
+	max-width:256px;
+}
+.wrap-eyes-ghost {
+	width:212px;
+	height:110px;
+	top:-44px;
+	left:44px;
+}
+.eye-ghost {
+	width:88px;
+	height:110px;
+}
+.row-retina {
+	height:66px;
+	margin:22px 0;
+	background-color:#FFF;
+}
+
+.row-retina:before, 
+.row-retina:after {
+	width:44px;
+	height: 22px;
+	left:22px;
+	position:absolute;
+	content: "";
+	background-color:#FFF;
+}
+.row-retina:before { top:-22px; }
+.row-retina:after { bottom:-22px; }
+
+.pupil-ghost {
+	width:44px;
+	height:44px;
+	bottom:-22px;
+	left:22px;
+}
+
+/*
+---------
+BODY
+---------
+*/
+.body-ghost {
+	height:170px;
+}
+
+/*---------
+FOOT
+---------*/
+
+ul.ghost-foot li {
+	width:80px;
+}
+ul.ghost-foot li .line1, ul.ghost-foot li .line2 {
+	height:22px;
+}
+ul.ghost-foot li .line1 {
+	max-width:80px;
+}
+ul.ghost-foot li .line2 {
+	max-width:36px;
+	margin-left:22px;
+}
+
+/*--------------------------------------------------
+  // COOKIES
+---------------------------------------------------*/
+
+.wrapper-cookies {
+	height:44px;
+	top:50%;
+	margin-top:-11px;
+}
+
+
+.row-cookies {
+	width:2000px;
+	height:44px;
+	margin-left:0px;
+}
+
+@keyframes move-cookies
+{
+0% { margin-left:-2px; }
+100% { margin-left: -792px; }
+}
+@-webkit-keyframes move-cookies
+{
+0% { margin-left:-2px; }
+100% { margin-left: -792px; }
+}
+
+
+.wrap-cookies {
+	width:800px;
+}
+.cookie {
+	width:44px;
+	height:44px;
+	margin:0 22px;
+	
+}
+
+.cookie:before { top:11px; left:0px; width:44px; height: 22px; }
+.cookie:after { top:0px; left:11px; width:22px; height: 44px; }

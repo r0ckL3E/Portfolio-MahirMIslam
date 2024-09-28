@@ -33,29 +33,96 @@ window.onscroll = () => {
 };
 
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1, // Corrected typo: slidesPerVeiw -> slidesPerView
+    slidesPerView: 1,
     spaceBetween: 50,
     loop: true,
-    grabCursor: true, // Corrected typo: granCursor -> grabCursor
+    grabCursor: true,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
     },
     navigation: {
-        nextEl: ".swiper-button-next", // Corrected typo: nextE1 -> nextEl
-        prevEl: ".swiper-button-prev", // Corrected typo: prevE1 -> prevEl
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
 });
 
+let rightOffset = 0; // Initialize rightOffset
+
+function checkOverlap() {
+    const professionContainer = document.querySelector('.profession-container');
+    const frame = document.querySelector('.illustration');
+
+    const professionRect = professionContainer.getBoundingClientRect();
+    const frameRect = frame.getBoundingClientRect();
+
+    // Check for overlap
+    if (
+        professionRect.left < frameRect.right &&
+        professionRect.right > frameRect.left &&
+        professionRect.top < frameRect.bottom &&
+        professionRect.bottom > frameRect.top
+    ) {
+        // Add the body_color animation to the base-color elements
+        const baseColors = document.querySelectorAll('.base-color');
+        baseColors.forEach(element => {
+            element.style.animation = 'body_color 2s';
+            element.style.webkitAnimation = 'body_color 2s';
+        });
+
+        // Reset the overlay position and rightOffset after the animation
+        setTimeout(() => {
+            baseColors.forEach(element => {
+                element.style.animation = '';
+                element.style.webkitAnimation = '';
+            });
+
+            const overlay = document.querySelector('.overlay');
+            overlay.style.right = '0px'; // Reset to original position
+
+            rightOffset = 0; // Reset rightOffset to 0
+            professionContainer.style.right = `${rightOffset}px`; // Reset professionContainer position
+        }, 2000); // Duration of the animation (4s) + delay (1s)
+    }
+}
 
 function animateFunc() {
     const mouths = document.querySelectorAll('.overlay .mouth');
     mouths.forEach(mouth => {
-        mouth.style.animation = 'none'; // Reset animation
-        mouth.offsetHeight; // Triggers reflow
-        mouth.style.animation = null; // Apply animation with pauses
+        mouth.style.animation = 'none';
+        mouth.offsetHeight;
+        mouth.style.animation = null;
     });
+
+    const professionContainer = document.querySelector('.profession-container');
+    rightOffset += 50; // Adjust the value as needed
+    professionContainer.style.right = `${rightOffset}px`;
+
+    // Code to toggle animations on illustration and baseColor
+    const illustration = document.querySelector('.illustration');
+    const baseColor = document.querySelector('.base-color');
+
+    // Remove the animate class if it exists to restart the animation
+    illustration.classList.remove('animate');
+    baseColor.classList.remove('animate');
+
+    // Trigger reflow to restart the animation
+    void illustration.offsetWidth;
+    void baseColor.offsetWidth;
+
+    // Add the animate class to start the animation
+    illustration.classList.add('animate');
+    baseColor.classList.add('animate');
+
+    // Check for overlap after the animation
+    setTimeout(checkOverlap, 1000); // Adjust the timeout duration as needed
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const animateButton = document.getElementById('animateButton');
+    animateButton.addEventListener('click', animateFunc);
+});
+
 
 ScrollReveal({ 
     reset: true,
