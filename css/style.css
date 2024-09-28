@@ -24,7 +24,6 @@
     --shadow-color: rgba(0, 0, 0, .2);
     --box-shadow: #505050;
     --white-color: #ffffff;
-    /* Added white color variable */
 }
 
 
@@ -492,8 +491,27 @@ section {
 .home-content .social-media a:nth-child(4) {
     border-radius: 50%;
     /* Circle */
-    border: .2rem solid var(--main-color);
+    border: .4rem solid var(--main-color);
     box-shadow: 0 .2rem .5rem var(--shadow-color);
+    animation: pulsate 5s infinite;
+}
+
+@keyframes pulsate {
+    0% {
+        border-width: .4rem;
+        border-color: var(--main-color);
+        box-shadow: 0 .2rem .5rem var(--shadow-color);
+    }
+    50% {
+        border-width: .6rem;
+        border-color: var(--bg-color);
+        box-shadow: 0 .4rem 1rem var(--shadow-color);
+    }
+    100% {
+        border-width: .4rem;
+        border-color: var(--main-color);
+        box-shadow: 0 .2rem .5rem var(--shadow-color);
+    }
 }
 
 .home-content .social-media a:nth-child(2) {
@@ -541,8 +559,8 @@ section {
 
 .home-content .social-media a:nth-child(1) {
     position: relative;
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
     background: transparent;
     border: none;
     /* Remove border for triangle */
@@ -2175,6 +2193,15 @@ FOOT
     .home .frame .ghost-foot {
         display: none;
     }
+
+    /* Vanish Pacman Background */
+    .home #background,
+    .about #background,
+    .services #background,
+    .portfolio #background {
+        display: none;
+    }
+
 }
 
 
