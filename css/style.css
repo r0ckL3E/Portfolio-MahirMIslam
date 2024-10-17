@@ -69,7 +69,7 @@ body {
 #background {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 100vh;
     position: absolute;
     /* Position it absolutely within its container */
@@ -643,7 +643,7 @@ section {
 
 .home .profession-container {
     position: absolute;
-    top: 48%;
+    top: 44%;
     right: 0;
     transform: translateY(-50%);
     margin-top: 30px;
